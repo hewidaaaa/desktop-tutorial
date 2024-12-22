@@ -1,0 +1,26 @@
+from abc import ABC, abstractmethod
+
+
+class Movable(ABC):
+    @abstractmethod
+    def move(self):
+        pass
+
+
+class Eatable(ABC):
+    @abstractmethod
+    def eat(self):
+        pass
+
+
+class Dog(Movable, Eatable):
+    def move(self):
+        return "Run"
+    
+    def eat(self):
+        return "Eat bone"
+
+
+dog = Dog()
+print(dog.move()) 
+print(dog.eat())   
